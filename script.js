@@ -58,7 +58,7 @@ function playMusicAndShowNotifications() {
 }
 
 function generateRandomNotifications() {
-  const notificationCount = 35; // Số lượng cửa sổ nhỏ
+  const notificationCount = 45; // Số lượng cửa sổ nhỏ
 
   for (let i = 0; i < notificationCount; i++) {
     setTimeout(() => {
