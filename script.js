@@ -44,6 +44,19 @@
 // Đoạn mã đã có
 const messages = ["Nhớ nhớ nhớ Nhê!"];
 
+function playMusicAndShowNotifications() {
+  const audio = document.getElementById("background-music");
+
+  // Play music
+  if (audio) {
+    audio.currentTime = 0; // Restart from beginning
+    audio.play().catch((err) => console.error("Error playing audio:", err));
+  }
+
+  // Show notifications
+  generateRandomNotifications();
+}
+
 function generateRandomNotifications() {
   const notificationCount = 35; // Số lượng cửa sổ nhỏ
 
