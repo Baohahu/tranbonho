@@ -114,3 +114,74 @@ button:hover {
     transform: scale(1);
   }
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+    top: 20px;
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .notification {
+    width: 200px;
+    height: 140px;
+    font-size: 14px;
+  }
+
+  .notification p {
+    padding: 8px;
+  }
+
+  .minimize-btn {
+    font-size: 18px;
+  }
+
+  a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+
+  h1 {
+    font-size: 24px;
+    top: 15px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .notification {
+    width: 160px;
+    height: 120px;
+    font-size: 12px;
+  }
+
+  .notification-header span {
+    font-size: 14px;
+  }
+
+  .notification p {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .minimize-btn {
+    font-size: 16px;
+    padding: 3px;
+  }
+
+  a {
+    font-size: 11px;
+  }
+}

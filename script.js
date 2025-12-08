@@ -31,30 +31,29 @@
 
 // function minimizeNotification(button) {
 //   const notification = button.closest('.notification');
-//   notification.style.display = 'none'; 
+//   notification.style.display = 'none';
 // }
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   var encodedText = '&#68;&#101;&#115;&#105;&#103;&#110;&#32;&#98;&#121;&#32;&#80;&#97;&#110;&#98;&#97;&#112;';
 //   var footer = document.createElement("a");
-//   footer.innerHTML = encodedText; 
-//   document.body.appendChild(footer); 
+//   footer.innerHTML = encodedText;
+//   document.body.appendChild(footer);
 // });
 
 // Đoạn mã đã có
-const messages = [
-  "Nhớ nhớ nhớ Sâuu!"
-];
+const messages = ["Nhớ nhớ nhớ Nhê!"];
 
 function generateRandomNotifications() {
   const notificationCount = 35; // Số lượng cửa sổ nhỏ
 
   for (let i = 0; i < notificationCount; i++) {
     setTimeout(() => {
-      const notification = document.createElement('div');
-      notification.className = 'notification';
+      const notification = document.createElement("div");
+      notification.className = "notification";
 
-      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      const randomMessage =
+        messages[Math.floor(Math.random() * messages.length)];
       notification.innerHTML = `
         <div class="notification-header">
           <button class="minimize-btn" onclick="minimizeNotification(this)">–</button>
@@ -74,31 +73,34 @@ function generateRandomNotifications() {
 }
 
 function minimizeNotification(button) {
-  const notification = button.closest('.notification');
-  notification.style.display = 'none'; 
+  const notification = button.closest(".notification");
+  notification.style.display = "none";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  var encodedText = '&#68;&#101;&#115;&#105;&#103;&#110;&#32;&#98;&#121;&#32;&#80;&#97;&#110;&#98;&#97;&#112;';
+  var encodedText =
+    "&#68;&#101;&#115;&#105;&#103;&#110;&#32;&#98;&#121;&#32;&#80;&#97;&#110;&#98;&#97;&#112;";
   var footer = document.createElement("a");
-  footer.innerHTML = encodedText; 
-  document.body.appendChild(footer); 
+  footer.innerHTML = encodedText;
+  document.body.appendChild(footer);
 });
 
 // Tích hợp phát nhạc và hiện cửa sổ
 function handleTextClick() {
-  const audio = document.getElementById('background-music');
-  
+  const audio = document.getElementById("background-music");
+
   // Phát hoặc dừng nhạc
   if (audio.paused) {
     audio.play();
   } else {
     audio.pause();
   }
-  
+
   // Hiện các cửa sổ nhỏ
   generateRandomNotifications();
 }
 
 // Thêm sự kiện nhấn vào dòng chữ
-document.getElementById('clickable-text').addEventListener('click', handleTextClick);
+document
+  .getElementById("clickable-text")
+  .addEventListener("click", handleTextClick);
